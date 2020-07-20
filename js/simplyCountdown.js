@@ -163,7 +163,7 @@
         );
 
         if (parameters.enableUtc) {
-            targetDate = new Date(2020, 7, 9 , 9);
+            targetDate = new Date(2020, 7, 9 , 8);
         } else {  }
 
         Array.prototype.forEach.call(cd, function (countdown) {
