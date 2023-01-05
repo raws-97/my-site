@@ -115,9 +115,9 @@
      */
     simplyCountdown = function (elt, args) {
         var parameters = extend({
-                year: 2020,
-                month: 8,
-                day: 9,
+                year: 2023,
+                month: 2,
+                day: 11,
                 hours: 0,
                 minutes: 0,
                 seconds: 0,
@@ -163,7 +163,7 @@
         );
 
         if (parameters.enableUtc) {
-            targetDate = new Date(2020, 7, 9 , 8);
+            targetDate = new Date(2023, 1, 11 , 10);
         } else {  }
 
         Array.prototype.forEach.call(cd, function (countdown) {
