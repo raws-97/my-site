@@ -94,3 +94,9 @@ function reinitalize_owl(){
         autoHeight: true,
     });
 }
+
+$("#open").click(function(){
+    $("#modal").hide()
+    $("#page").show()
+    $("#audio")[0].play()
+})

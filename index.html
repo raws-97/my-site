@@ -51,9 +51,20 @@
 
 	</head>
 	<body>
-	
-	<div id="page">
 
+	<audio id="audio" loop src="music/music.mp3" style="display: none;"></audio>
+
+	<div class="box" id="modal">
+		<a class="bItem">
+		</a>
+		<div class="col-md-4 col-sm-4 open-invitation">
+			<center>
+				<button class="btn btn-default btn-block" id="open"><i class="icon-mail"></i> Open Invitation</button>
+			</center>
+		</div>
+	  </div>
+	
+	<div id="page" style="display: none;">
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/Cover.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
@@ -125,7 +136,8 @@
 									<h3>Ceremony</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
-										<span>10:00 AM</span>
+										<span>10:00 AM</span> <br>
+										<span>-</span>
 										<span>Done</span>
 									</div>
 									<div class="event-col">
@@ -398,14 +410,6 @@
 	</footer>
 	</div>
 
-	<audio controls autoplay loop muted style="display: none;">
-		<source src="music/music.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
-
-	<iframe src="music/music.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-	</iframe> 
-
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
@@ -432,9 +436,8 @@
 	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
-	<script src="js/custom.js"></script>
 	<script src="js/main.js"></script>
-	
+	<script src="js/custom.js"></script>
 
 	<script>
 		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
@@ -453,14 +456,6 @@
 			day: d.getDate(),
 			enableUtc: false
 		});
-
-		var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-		if (!isChrome){
-			$('#iframeAudio').remove()
-		}
-		else {
-			$('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-		}
 
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);

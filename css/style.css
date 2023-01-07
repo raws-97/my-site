@@ -1742,4 +1742,38 @@ form label {
   opacity: 0;
 }
 
+.bItem {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  bottom: 0;
+  left: 0px;
+  padding: 18px;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../images/modal.JPG);
+}
+
+.bItem:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, black 120%);
+}
+
+.open-invitation{
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /*# sourceMappingURL=style.css.map */
